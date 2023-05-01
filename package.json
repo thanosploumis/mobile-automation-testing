@@ -22,6 +22,10 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4",
     "wdio-chromedriver-service": "^8.1.1",
+    "wdio-timeline-reporter": "^5.1.4",
     "webdriverio": "^8.8.8"
+  },
+  "dependencies": {
+    "app-inspector": "^2.2.0"
   }
 }

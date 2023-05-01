@@ -38,8 +38,8 @@ describe("Mobile Automation Test - ApiDemo", () => {
     })
 
     it("should be present a pop up message with text 'gone off'", async () => {
-        // Wait for the toast message to appear
 
+        // Wait for the toast message to appear
         await browser.waitUntil(async () => {
             const toast = $('//android.widget.Toast[@package="com.android.settings"]')
             const toastText = await toast.getText()
@@ -48,8 +48,4 @@ describe("Mobile Automation Test - ApiDemo", () => {
         }, { timeout: 35000 })
 
     })
-
-
 })
-
-

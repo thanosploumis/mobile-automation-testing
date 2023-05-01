@@ -1,5 +1,9 @@
-const projectPath = require("path");
-const iosAppPath = projectPath.join(process.cwd(), "app/ios/MyRNDemoApp.app");
+const projectPath = require("path")
+// Place on the below path directory your iOS .app or .ipa file format to test and change the path with this
+const iosAppPath = projectPath.join(
+  process.cwd(),
+  "app/ios/some-ipa-or-app-file"
+)
 exports.config = {
     //
     // ====================
@@ -55,8 +59,8 @@ exports.config = {
     //
     capabilities: [{
       "platformName": "IOS",
-      "appium:deviceName": "iPhone 14 Pro Max",
-      "appium:platformVersion": "16.0",
+      "appium:deviceName": "iPhone 8",
+      "appium:platformVersion": "15.2",
       "appium:automationName": "XCUItest",
       "appium:app": iosAppPath,
     }],
@@ -130,7 +134,11 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec'],
-
+    reporterOptions: {
+        spec: {
+            outputDir: './reports/spec'
+        }
+    },
 
     
     //
